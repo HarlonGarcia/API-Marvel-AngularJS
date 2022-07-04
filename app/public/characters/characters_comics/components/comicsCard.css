@@ -1,0 +1,32 @@
+.comics-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.comics-title {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    min-width: 100%;
+    color: #fff;
+    min-height: 5.5em;
+    padding: 0.9em;
+    border-radius: 0.8em 0.8em 0 0;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.comic-img {
+    padding: 0;
+    width: 100%;
+}
+
+.comic-img:hover {
+    transform: scale(1.1);
+}

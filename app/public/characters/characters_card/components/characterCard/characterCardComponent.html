@@ -1,0 +1,12 @@
+<div class="character-name solid-panel row">
+    <h2>{{::ctrl.character.name}}</h2>
+</div>
+<div class="row">
+    <div class="p-col col-md-12 content">
+        <img src="{{ctrl.character.thumbnail.path + '/standard_large.jpg'}}" onerror="this.src='assets/not-found.jpg'" alt="marvel character">
+        <p class="description">{{ctrl.character.description || 'Personagem sem descrição'}}</p>
+    </div>
+</div>
+<div class="character-btn solid-panel row">
+    <button ng-click="ctrl.seeComics(character)">Ver quadrinhos</button>
+</div>

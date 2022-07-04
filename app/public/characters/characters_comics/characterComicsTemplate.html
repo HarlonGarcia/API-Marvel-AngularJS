@@ -1,0 +1,14 @@
+<div ng-controller="CharacterComicsController as ctrl">
+    <header-fixed></header-fixed>
+    <button ng-click="ctrl.returnToHome()" class="return-btn">
+        <span>Voltar</span>
+    </button>
+    <div class="container-fluid">
+        <section class="row text-center main-group">
+            <article ng-repeat="comics in ctrl.comicsData"
+                class="comics-card p-col col-xs-12 col-sm-6 col-md-4">
+                <comics-card class="comics-card-article" comics="comics"></comics-card>
+            </article>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+.character-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.solid-panel {
+    display: flex;
+    background-color: #f00;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.character-name {
+    border-radius: 0.8em 0.8em 0 0;
+    font-size: 1rem;
+}
+
+.character-btn {
+    background-size: 300% 300%;
+    background-image: linear-gradient(to right, #f00 0%, hsl(0, 100%, 21%) 55%, #f00 100%);
+    transition: 0.5s;
+    height: 2em;
+    border-radius: 0 0 0.8em 0.8em;
+    cursor: pointer;
+    padding: 1.2em;
+    font-size: 0.9rem;
+}
+
+.character-btn:hover {
+    background-position: right center;
+}
+
+.character-btn button {
+    background-color: transparent;
+    width: 10em;
+    height: 2em;
+    border: none;
+    outline: none;
+}
+
+.content {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.content img {
+    width: 100%;
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #fff;
+    font-size: 0.7rem;
+    opacity: 0;
+    padding: 1em;
+    line-height: 1.15;
+}
+
+.content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    bottom: 0;
+    transition: height 0.5s ease-out;
+    background: linear-gradient(to bottom, black 100%, black 100%);
+}
+
+.content:hover:before {
+    height: 100%;
+}
+
+.content:hover .description {
+    transition-delay: 0.5s;
+    opacity: 100%;
+}

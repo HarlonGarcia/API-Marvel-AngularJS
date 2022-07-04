@@ -1,0 +1,26 @@
+<div ng-controller="HomeController as ctrl">
+    <header-fixed></header-fixed>
+    <div class="container-fluid">
+        <div class="col-md-12 search">
+            <form class="search-form col-md-6">
+                <input ng-model="ctrl.characterWanted" type="text" class="form-control" placeholder="Encontre seu personagem favorito"
+                    aria-label="Character's name">
+                <div class="input-group-append">
+                    <button ng-click="ctrl.searchCharacter()" class="btn" type="button">
+                        <img src="assets/search.png" alt="search-icon">
+                    </button>
+                </div>
+            </form>
+        </div>
+        <section class="row text-center main-group">
+            <article ng-repeat="character in ctrl.charactersData" class="character-card p-col col-xs-6 col-sm-3 col-md-2">
+                <character-card class="card-effect" character="character" see-comics="ctrl.seeComics(character)"></character-card>
+            </article>
+        </section>
+        <div class="full-row">
+            <button class="see-more-btn" ng-click="ctrl.seeMore()">
+                <span>Ver mais</span>
+            </button>
+        </div>
+    </div>
+</div>
