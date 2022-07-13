@@ -1,5 +1,6 @@
 <div ng-controller="HomeController as ctrl">
     <header-fixed></header-fixed>
+    <p ng-show="loading">loading</p>
     <div class="container-fluid">
         <div class="col-md-12 search">
             <form class="search-form col-md-6">
@@ -7,7 +8,7 @@
                     aria-label="Character's name">
                 <div class="input-group-append">
                     <button ng-click="ctrl.searchCharacter()" class="btn" type="button">
-                        <img src="assets/search.png" alt="search-icon">
+                        <img src="assets/images/search.png" alt="search-icon">
                     </button>
                 </div>
             </form>
